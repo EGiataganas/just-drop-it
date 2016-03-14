@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'brakeman'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
 end
