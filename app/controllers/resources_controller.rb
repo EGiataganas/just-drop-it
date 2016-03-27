@@ -54,6 +54,6 @@ private
 
   # Only allow a trusted parameter "white list" through.
   def resource_params
-    params.require(:resource).permit(:name)
+    params.require(:resource).permit(:name, :file)
   end
 end
