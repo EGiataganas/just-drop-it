@@ -10,6 +10,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'fog', require: 'fog/aws'
+gem 'figaro'
 
 group :development, :test do
   gem 'brakeman'
@@ -27,4 +30,8 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
