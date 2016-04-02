@@ -43,26 +43,10 @@ RSpec.describe ResourcesController, type: :controller do
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested resource as @resource" do
-      resource = Resource.create! valid_attributes
-      get :show, { id: resource.to_param }, valid_session
-      expect(assigns(:resource)).to eq(resource)
-    end
-  end
-
   describe "GET #new" do
     it "assigns a new resource as @resource" do
       get :new, {}, valid_session
       expect(assigns(:resource)).to be_a_new(Resource)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested resource as @resource" do
-      resource = Resource.create! valid_attributes
-      get :edit, { id: resource.to_param }, valid_session
-      expect(assigns(:resource)).to eq(resource)
     end
   end
 
@@ -95,47 +79,6 @@ RSpec.describe ResourcesController, type: :controller do
       it "re-renders the 'new' template" do
         post :create, { resource: invalid_attributes }, valid_session
         expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested resource" do
-        resource = Resource.create! valid_attributes
-        put :update, { id: resource.to_param, resource: new_attributes }, valid_session
-        resource.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested resource as @resource" do
-        resource = Resource.create! valid_attributes
-        put :update, { id: resource.to_param, resource: valid_attributes }, valid_session
-        expect(assigns(:resource)).to eq(resource)
-      end
-
-      it "redirects to the resource" do
-        resource = Resource.create! valid_attributes
-        put :update, { id: resource.to_param, resource: valid_attributes }, valid_session
-        expect(response).to redirect_to(resource)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns the resource as @resource" do
-        resource = Resource.create! valid_attributes
-        put :update, { id: resource.to_param, resource: invalid_attributes }, valid_session
-        expect(assigns(:resource)).to eq(resource)
-      end
-
-      it "re-renders the 'edit' template" do
-        resource = Resource.create! valid_attributes
-        put :update, { id: resource.to_param, resource: invalid_attributes }, valid_session
-        expect(response).to render_template("edit")
       end
     end
   end
