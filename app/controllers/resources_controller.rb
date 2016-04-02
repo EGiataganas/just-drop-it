@@ -1,13 +1,9 @@
 class ResourcesController < ApplicationController
-  before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  before_action :set_resource, only: [:destroy]
 
   # GET /resources
   def index
     @resources = Resource.all
-  end
-
-  # GET /resources/1
-  def show
   end
 
   # GET /resources/new
@@ -15,27 +11,14 @@ class ResourcesController < ApplicationController
     @resource = Resource.new
   end
 
-  # GET /resources/1/edit
-  def edit
-  end
-
   # POST /resources
   def create
     @resource = Resource.new(resource_params)
 
     if @resource.save
-      redirect_to @resource, notice: 'Resource was successfully created.'
+      redirect_to resources_url, notice: 'Resource was successfully created.'
     else
       render :new
-    end
-  end
-
-  # PATCH/PUT /resources/1
-  def update
-    if @resource.update(resource_params)
-      redirect_to @resource, notice: 'Resource was successfully updated.'
-    else
-      render :edit
     end
   end
 
