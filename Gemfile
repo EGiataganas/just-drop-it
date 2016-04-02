@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'fog', require: 'fog/aws'
 gem 'figaro'
+gem 'devise'
 
 group :development, :test do
   gem 'brakeman'
