@@ -6,3 +6,9 @@ machine:
 test:
   override:
     - bundle exec rake
+
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: just-drop-it
