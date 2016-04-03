@@ -1,5 +1,6 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:destroy]
+  before_action :authenticate_user!
 
   # GET /resources
   def index
@@ -14,6 +15,7 @@ class ResourcesController < ApplicationController
   # POST /resources
   def create
     @resource = Resource.new(resource_params)
+    @resource.user_id = current_user.id
 
     if @resource.save
       redirect_to resources_url, notice: 'Resource was successfully created.'
