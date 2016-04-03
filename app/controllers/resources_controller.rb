@@ -1,6 +1,7 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:destroy]
   before_action :authenticate_user!
+  before_action :check_user, only: [:destroy]
 
   # GET /resources
   def index
@@ -35,6 +36,13 @@ private
   # Use callbacks to share common setup or constraints between actions.
   def set_resource
     @resource = Resource.find(params[:id])
+  end
+
+  def check_user
+    unless @resource.user == current_user
+      redirect_to root_url,
+        alert: 'Sorry, this resource belongs to someone else'
+    end
   end
 
   # Only allow a trusted parameter "white list" through.
