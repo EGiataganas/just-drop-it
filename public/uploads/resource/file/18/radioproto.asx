@@ -1,0 +1,24 @@
+<ASX Version="3">
+<TITLE>Radio radioproto</TITLE>
+ <ENTRY>
+        <TITLE>Welcome to Radio radioproto</TITLE>
+        <AUTHOR>Radio radioproto</AUTHOR>
+        <COPYRIGHT>(c)2003 www.istoikona.com</COPYRIGHT>
+        <!-- This is the ToolTip text for Title text -->
+        <ABSTRACT>Welcome to Radio radioproto</ABSTRACT>
+        <!-- This is a comment.  Change the following path to point to
+            your Windows Media file -->
+	<REF HREF = "mms://live.istoikona.com/radioproto"/>
+	<REF HREF = "rtsp://live.istoikona.com/radioproto"/>
+	<REF HREF = "http://live.istoikona.com/radioproto"/>
+	<REF HREF = "mms://rock.istoikona.com/radioproto"/>
+	<REF HREF = "rtsp://rock.istoikona.com/radioproto"/>
+	<REF HREF = "http://rock.istoikona.com/radioproto"/>
+	<REF HREF = "mms://live.istoikona.com/radioproto"/>
+	<REF HREF = "rtsp://live.istoikona.com/radioproto"/>
+	<REF HREF = "http://live.istoikona.com/radioproto"/>
+<PARAM name="HTMLView" value="http://www.radioproto.com"/>
+        <MOREINFO HREF="http://www.istoikona.com" target="_blank" />
+    <ABSTRACT>For IstoIkona Subscription click me!!!</ABSTRACT>
+    </BANNER>
+</ASX>
