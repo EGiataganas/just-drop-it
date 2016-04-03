@@ -1,6 +1,7 @@
 # Just Drop-IT
 
-*A little story of the project (in_progress)*
+Just Drop IT is a public file sharing web application. Each user requires to sign up in order to be able to download or upload his/her own collaboration resources. Uploaded resources are only able to be deleted by the user owner.
+
 
 | Dependency | Version |
 |:-----------|:--------|
@@ -16,11 +17,11 @@
 
 2. Install the project's dependencies using bundler.
 
-  - `bundle install`
+  `bundle install`
 
 3. Run tests
 
-  - `rake`
+  `rake`
 
 ## Server
 
@@ -28,7 +29,7 @@
 
 ## Deployment
 
-(http://http://just-drop-it.herokuapp.com/)
+(http://just-drop-it.herokuapp.com/)
 
 ## Environment variables used by the application
 
